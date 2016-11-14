@@ -8,6 +8,7 @@ options head
     }
 
 snippet class
+alias cls
 abbr    class {}
     class ${1:#:Name} ${2::} ${3:Parent}${4:,} ${5:Interface} {
         ${0:TARGET}
@@ -26,6 +27,7 @@ abbr    interface {}
     }
 
 snippet method
+alias ctor
     ${1:void} ${2:#:Method}(${3:#:arguments}) {
         ${0:TARGET}
     }
@@ -332,9 +334,14 @@ snippet s.d
 snippet s.r.c
     System.Runtie.CompilerServices
 
-snippet s.w.f
-    System.Windows.Forms
+snippet s.n
+    System.Net
 
+snippet s.w
+    System.Web
+
+snippet s.w.m
+   System.Web.Mvc
 
 # Attribute
 snippet serializable
@@ -444,7 +451,6 @@ options head
             System.Console.WriteLine("Hello, world!");
         }
     }
-
 
 # NUnit
 snippet testclass
