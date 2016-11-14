@@ -481,3 +481,27 @@ options head
 snippet category
 options head
     [Category("${0:#:category}")]
+
+# XUnit
+snippet trait
+alias xt
+options head
+    [Trait("${0:TARGET}", "true")]
+
+snippet fact
+alias xf
+options head
+    [Fact]
+    public void ${1:#:Name}Test()
+    {
+        ${0:TARGET}
+    }
+
+snippet theory
+alias xt 
+options head
+    [Theory]
+    public void ${1:#:Name}Test()
+    {
+        ${0:TARGET}
+    }
